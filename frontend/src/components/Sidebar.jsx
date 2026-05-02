@@ -22,8 +22,8 @@ const Sidebar = () => {
 
 				<Link
 					to='/'
-					className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg 
-					hover:bg-gray-800'
+					className='p-1.5 flex justify-center transition-all duration-300 rounded-lg 
+					hover:bg-white/10 hover:scale-110 active:scale-95'
 				>
 					<IoHomeSharp size={20} />
 				</Link>
@@ -31,7 +31,7 @@ const Sidebar = () => {
 				{authUser && (
 					<Link
 						to='/likes'
-						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg hover:bg-gray-800'
+						className='p-1.5 flex justify-center transition-all duration-300 rounded-lg hover:bg-white/10 hover:scale-110 active:scale-95'
 					>
 						<FaHeart size={22} />
 					</Link>
@@ -40,7 +40,7 @@ const Sidebar = () => {
 				{authUser && (
 					<Link
 						to='/explore'
-						className='p-1.5 flex justify-center transition-colors duration-200 rounded-lg hover:bg-gray-800'
+						className='p-1.5 flex justify-center transition-all duration-300 rounded-lg hover:bg-white/10 hover:scale-110 active:scale-95'
 					>
 						<MdOutlineExplore size={25} />
 					</Link>
@@ -49,7 +49,7 @@ const Sidebar = () => {
 				{!authUser && (
 					<Link
 						to='/login'
-						className='p-1.5 focus:outline-nones transition-colors duration-200 rounded-lg hover:bg-gray-800'
+						className='p-1.5 transition-all duration-300 rounded-lg hover:bg-white/10 hover:scale-110 active:scale-95'
 					>
 						<PiSignInBold size={25} />
 					</Link>
@@ -58,14 +58,14 @@ const Sidebar = () => {
 				{!authUser && (
 					<Link
 						to='/signup'
-						className='p-1.5 focus:outline-nones transition-colors duration-200 rounded-lg hover:bg-gray-800'
+						className='p-1.5 transition-all duration-300 rounded-lg hover:bg-white/10 hover:scale-110 active:scale-95'
 					>
 						<MdEditDocument size={25} />
 					</Link>
 				)}
 
 				{authUser && (
-					<div className='flex flex-col gap-2 mt-auto'>
+					<div className='flex flex-col gap-4 mt-auto'>
 						<Logout />
 					</div>
 				)}

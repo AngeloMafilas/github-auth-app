@@ -30,7 +30,7 @@ body {
 
 @layer components {
 	.bg-glass {
-		@apply bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 
-		hover:bg-gray-600/10 border border-gray-800 text-white;
+		@apply bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-5 
+		hover:bg-white/10 border border-white/10 text-white transition-all duration-300;
 	}
 }

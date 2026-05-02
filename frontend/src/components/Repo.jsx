@@ -17,10 +17,10 @@ const Repo = ({ repo }) => {
 	};
 
 	return (
-		<li className='mb-10 ms-7'>
+		<li className='mb-10 ms-7 group'>
 			<span
 				className='absolute flex items-center justify-center w-6 h-6 bg-blue-100
-    rounded-full -start-3 ring-8 ring-white'
+    rounded-full -start-3 ring-8 ring-white group-hover:scale-110 transition-transform duration-300'
 			>
 				<FaCodeBranch className='w-5 h-5 text-blue-800' />
 			</span>
@@ -29,26 +29,26 @@ const Repo = ({ repo }) => {
 					href={repo.html_url}
 					target='_blank'
 					rel='noreferrer'
-					className='flex items-center gap-2 text-lg font-semibold'
+					className='flex items-center gap-2 text-lg font-semibold hover:text-blue-400 transition-colors duration-200'
 				>
 					{repo.name}
 				</a>
 				<span
-					className='bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5
-        py-0.5 rounded-full flex items-center gap-1'
+					className='bg-yellow-500/10 text-yellow-500 text-xs font-medium px-2.5
+        py-0.5 rounded-full flex items-center gap-1 border border-yellow-500/20'
 				>
 					<FaRegStar /> {repo.stargazers_count}
 				</span>
 				<span
-					className='bg-purple-100 text-purple-800 text-xs font-medium
-         px-2.5 py-0.5 rounded-full flex items-center gap-1'
+					className='bg-purple-500/10 text-purple-500 text-xs font-medium
+         px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-purple-500/20'
 				>
 					<FaCodeFork /> {repo.forks_count}
 				</span>
 				<span
 					onClick={() => handleCloneClick(repo)}
-					className='cursor-pointer bg-green-100 text-green-800 text-xs
-        font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1'
+					className='cursor-pointer bg-green-500/10 text-green-500 text-xs
+        font-medium px-2.5 py-0.5 rounded-full flex items-center gap-1 border border-green-500/20 hover:bg-green-500/20 transition-all duration-200'
 				>
 					<FaCopy /> Clone
 				</span>

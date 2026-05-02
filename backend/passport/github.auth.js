@@ -22,7 +22,7 @@ passport.use(
 		{
 			clientID: process.env.GITHUB_CLIENT_ID,
 			clientSecret: process.env.GITHUB_CLIENT_SECRET,
-			callbackURL: "https://mern-github-app.onrender.com/api/auth/github/callback",
+			callbackURL: process.env.NODE_ENV === "production" ? "https://mern-github-app.onrender.com/api/auth/github/callback" : "http://127.0.0.1:5000/api/auth/github/callback",
 		},
 		async function (accessToken, refreshToken, profile, done) {
 			const user = await User.findOne({ username: profile.username });
