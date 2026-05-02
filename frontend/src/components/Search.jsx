@@ -9,9 +9,13 @@ const Search = ({ onSearch }) => {
 			<label htmlFor='default-search' className='mb-2 text-sm font-medium text-gray-900 sr-only'>
 				Search
 			</label>
+			<div className='flex items-center gap-4 mb-4'>
+				<img src='/github-logo.png' alt='Github Logo' className='w-20 h-20 object-contain' />
+				<h2 className='text-2xl font-bold font-sans'>Search GitHub</h2>
+			</div>
 			<div className='relative'>
 				<div className='absolute inset-y-0 start-0 flex items-center z-10 ps-3 pointer-events-none'>
-					<IoSearch className='w-5 h-5' />
+					<IoSearch className='w-5 h-5 text-gray-400' />
 				</div>
 				<input
 					type='search'
